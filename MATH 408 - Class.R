@@ -175,7 +175,7 @@ pred <- fitted |>
   as_array()
 
 #Accuracy of the model, but just projecting the accuracy of determining CHD
-#The accuracy is 0.80 to 0.85 whcih is subpar, and thsi can be fixed in extensive coding
+#The accuracy is 0.80 to 0.85 which is subpar, and this can be fixed in extensive coding
 
 acc <- mean(pred == as_array(Ytesting)) 
 acc
@@ -210,7 +210,7 @@ plot(
   main = "Neural Network ROC Curve"
 )
 
-#smoothing of the ROC curv whihc wil obviously introduced mroel akc of precsion for AUCr
+#smoothing of the ROC curv which wil obviously introduce lack of precision for AUC
 # AUC of regular ROC curve without smoothing 
 auc(roc_nn)
 rocs <- smooth(roc_nn, method = "density") 
@@ -219,7 +219,7 @@ plot(rocs,legacy.axes = TRUE)
 auc(rocs)
 
 
-testing$TenYearCHD <- as.factor(testing$TenYearCHD) #establishing testing of predictor varibale as a claqualitative intital
+testing$TenYearCHD <- as.factor(testing$TenYearCHD) #establishing testing of predictor varibale as a qualitative intital
 
 
 
